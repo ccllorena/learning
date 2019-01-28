@@ -5,7 +5,7 @@ namespace learning\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\input; //para subir imagenes
+use Illuminate\Support\Facades\Input; //para subir imagenes
 use learning\Http\Requests\ArrendatariosFormRequest;
 use learning\Arrendatarios;
 use DB;
@@ -67,7 +67,7 @@ public function __construct()
         $arrendatarios->rut=$request->get('rut');
         $arrendatarios->dig=$request->get('dig');
 
-        if (input::file('imagen')){
+        if (Input::file('imagen')){
         	$file=Input::file('imagen');
         	$file->move(public_path().'/imagenes/arrendatarios/',$file->getClientOriginalName());
         	$arrendatarios->imagen='/'.$file->getClientOriginalName();
@@ -160,7 +160,7 @@ return view("almacen.arrendatario.edit",["arrendatarios"=>$arrendatarios,"coopro
         $arrendatario->rut=$request->get('rut');
         $arrendatario->dig=$request->get('dig');
 
-        if (input::file('imagen')){
+        if (Input::file('imagen')){
           $file=Input::file('imagen');
           $file->move(public_path().'/imagenes/arrendatarios/',$file->getClientOriginalName());
           $arrendatario->imagen='/'.$file->getClientOriginalName();

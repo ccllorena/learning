@@ -5,7 +5,7 @@ namespace learning\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\input; //para subir imagenes
+use Illuminate\Support\Facades\Input; //para subir imagenes
 use learning\Http\Requests\IntegrantesArreFormRequest;
 use learning\IntegrantesArrendatarios;
 use DB;
@@ -100,7 +100,7 @@ public function index(Request $request, $idarre, $idcoopro)
 
         // a continuacion para trabajar con la subida de la imagen
         
-        if (input::file('imagen')){
+        if (Input::file('imagen')){
 
         	$file=Input::file('imagen');
         	$file->move(public_path().'/imagenes/integrantesarre/',$file->getClientOriginalName());
@@ -182,7 +182,7 @@ public function index(Request $request, $idarre, $idcoopro)
         //categoria->condifion='1';
         // a continuacion para trabajar con la subida de la imagen
         
-        if (input::file('imagen')){
+        if (Input::file('imagen')){
 
         	$file=Input::file('imagen');
         	$file->move(public_path().'/imagenes/integrantesarre/',$file->getClientOriginalName());

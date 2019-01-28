@@ -5,7 +5,7 @@ namespace learning\Http\Controllers;
 use Illuminate\Http\Request;
 //use learning\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\input; //para subir imagenes
+use Illuminate\Support\Facades\Input; //para subir imagenes
 use learning\Http\Requests\IntegrantesFormRequest;
 use learning\Integrante;
 use DB;
@@ -97,7 +97,7 @@ public function __construct()
 
         // a continuacion para trabajar con la subida de la imagen
         
-        if (input::file('imagen')){
+        if (Input::file('imagen')){
 
         	$file=Input::file('imagen');
         	$file->move(public_path().'/imagenes/integrantes/',$file->getClientOriginalName());
@@ -176,7 +176,7 @@ public function __construct()
         //categoria->condifion='1';
         // a continuacion para trabajar con la subida de la imagen
         
-        if (input::file('imagen')){
+        if (Input::file('imagen')){
 
         	$file=Input::file('imagen');
         	$file->move(public_path().'/imagenes/integrantes/',$file->getClientOriginalName());

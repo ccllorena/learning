@@ -1,6 +1,6 @@
-<div class="modal fade modal-slide-in-right" aria-hidden="true" role="dialog" tabindex="-1" id="modal-delete-{{$coo->id}}">
+<div class="modal fade modal-slide-in-right" aria-hidden="true" role="dialog" tabindex="-1" id="modal-delete-{{$intearre->id}}">
     
-   {{Form::Open(array('action'=>array('ControllerLogica@destroy', $coo->id),'method'=>'delete'))}} 
+   {{Form::Open(array('action'=>array('IntegrantesArreController@destroy', $intearre->id),'method'=>'delete'))}} 
    
    <div class="modal-dialog">
        <div class="modal-content">
@@ -8,10 +8,10 @@
                <button type="button" class="close" data-dismiss="modal" aria-Label="Close">
                    <span aria-hidden="true">x</span>
                </button>
-               <h4 class="modal-title">Eliminar Coopropietario</h4>
+               <h4 class="modal-title">Eliminar Integrantes de Arrendatarios</h4>
           </div>
             <div class="modal-body">
-                <p>Confirme si desea eliminar el Coopropietario</p>  
+                <p>Confirme si desea eliminar al Integrante</p>  
           </div>
            <div class="modal-footer">
                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

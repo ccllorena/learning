@@ -80,7 +80,7 @@ Route::get('/createintegrantes/{idccoop}', 'IntegrantesController@create');
 Route::get('/editinte/{idinte}', 'IntegrantesController@edit');
 //Route::put('/updateinte/{id}', 'IntegrantesController@update');
 
-Route::get('/editintegrantes/{idinte}', 'IntegrantesController@index');
+Route::get('/editintegrantes/{idcoo}', 'IntegrantesController@index');
 
 Route::get('grabaestado/{id_coopropietario}', 'ControllerLogica@grabaestado');
 
@@ -96,6 +96,16 @@ Route::resource('updatearrendatarios', 'ArrendatariosController');
 
 
 
+
+
+
+
+
+Route::get('/editintegrantesarre/{idarre}/{idcooprop}', 'IntegrantesArreController@index');
+Route::resource('storinteearrendatarios', 'IntegrantesArreController');
+Route::get('/createintegrantesarre/{idaarre}', 'IntegrantesArreController@create');
+Route::resource('updatearrendatariosinte', 'IntegrantesArreController');
+Route::get('/listintegrantesarre/{id}/{idcooprop}','IntegrantesArreController@listintegrantesarre');
 
 Route::resource('almacen/coopropietario','ControllerLogica');
 Route::resource('almacen/integrante','IntegrantesController');

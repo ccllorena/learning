@@ -68,7 +68,7 @@ class ControllerLogica extends Controller
           ->where ('depto','<>','')
           ->select('c.id','c.nombre','c.rut','c.dig','e.nombre as estadocoopropietario','c.depto','c.estado','e.id as idestado')
           ->orderBy ('c.id','desc')
-          ->paginate(2);
+          ->paginate(3);
 
           $estados=DB::table('estados as ee')
           ->select('ee.id as idestados','ee.nombre as nombreestado')->get();
@@ -96,7 +96,7 @@ class ControllerLogica extends Controller
 
 
         $coopropietarios->save();
-        return Redirect::to('almacen/coopropietario');
+        return Redirect::to('/');
         
         
     }   
@@ -147,7 +147,7 @@ class ControllerLogica extends Controller
 
         //}else{
 
-          return Redirect::to('almacen/coopropietario');
+          return Redirect::to('/');
         //}
         
     }
@@ -157,7 +157,7 @@ class ControllerLogica extends Controller
          $coopropietarios= \learning\Coopropietario::findOrFail($id);
         //$categoria->condicion='0';
          $coopropietarios->delete();
-         return Redirect::to('almacen/coopropietario');
+         return Redirect::to('/');
     } 
 
     

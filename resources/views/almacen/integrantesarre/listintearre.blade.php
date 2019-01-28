@@ -4,15 +4,19 @@
 <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
         
-        <h3>Listado Integrantes</h3>
+        <h3>Listado Integrantes Arrendatario <a href="{{url('/editarrendatarios/'.$idcoopropie)}}"><button class="btn btn-success">Volver</button>
+
+        </a> </h3>
         
        
         
     </div>
     
-    
+  
+
     
 </div>
+
 
 <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -24,17 +28,17 @@
                   <th>id.</th>
                   <th>Nombre</th>
                   <th>Rut</th>
-                  <th>Coopropietario</th>
+                  <th>Arrendatairo</th>
                   <th>Imagen</th>
                 </thead>
-                @foreach ($integra as $inte)
+                @foreach ($integranarre as $intearre)
                 <tr>
-                    <td>{{ $inte->id }}</td>
-                    <td>{{ $inte->nombre }}</td>
-                    <td>{{ $inte->rut }}-{{ $inte->dig }}</td>
-                    <td>{{ $inte->nombrecoopropietario }}</td>
+                    <td>{{ $intearre->id }}</td>
+                    <td>{{ $intearre->nombre }}</td>
+                    <td>{{ $intearre->rut }}-{{ $intearre->dig }}</td>
+                    <td>{{ $intearre->nombrearrendatario }}</td>
                     <td> 
-                        <img src="{{asset('imagenes/integrantes/'). $inte->imagen}}" alt="{{ $inte->nombre }}" height="100px" width="100px">
+                        <img src="{{asset('imagenes/integrantesarre/'). $intearre->imagen}}" alt="{{ $intearre->nombre }}" height="100px" width="100px">
                     </td>
 
                 </tr>
@@ -44,21 +48,26 @@
             
         </div>
         
-        {{ $integra ->render() }}
+        {{ $integranarre ->render() }}
         
     </div>
                      
  
                  
 </div>
-
 <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 
-        <h3><a href="{{url('/')}}"><button class="btn btn-success">Volver</button></a>   </h3>
-      
+        <h3><a href="{{url('/editarrendatarios/'.$idcoopropie)}}"><button class="btn btn-success">Volver</button>
+
+        </a>   </h3>
+       
+
+        
     </div>
-   
+    
+    
+    
 </div>
 @endsection
 <!--stop-->

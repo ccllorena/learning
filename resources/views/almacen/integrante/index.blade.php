@@ -4,10 +4,12 @@
 <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
         
-        <!--<h3>Integrantes <a href="/createintegrantes/"><button class="btn btn-success">Nuevo</button></a>   </h3>-->
-        <h3>Integrantes <a href="{{url('/createintegrantes/'.$integrantes[0]->id_coo)}}"><button class="btn btn-success">Nuevo</button></a>   </h3>
+
+     
+
+        <h3>Integrantes: <a href="{{url('/createintegrantes/'.$idcoopro)}}"><button class="btn btn-success">Nuevo</button></a>   </h3>
        
-        
+
         
     </div>
     
@@ -43,7 +45,7 @@
                     <td>
                         <!--<a href="{{url('/editinte/'.$inte->id)}}"><button class="btn btn-info">Editar</button></a>-->
 
-                        <a href="{{URL::action('IntegrantesController@edit',$inte->id)}}"><button class="btn btn-info">Editarr</button></a>
+                        <a href="{{URL::action('IntegrantesController@edit',$inte->id)}}"><button class="btn btn-info">Editar</button></a>
 
 
                         <a href="" data-target="#modal-delete-{{$inte->id}}" data-toggle="modal">
@@ -65,6 +67,16 @@
                      
  
                  
+</div>
+
+
+<div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+        
+        <h3><a href="{{url('/')}}"><button class="btn btn-success">Volver</button></a>   </h3>
+        
+    </div>
+    
 </div>
 
 @endsection

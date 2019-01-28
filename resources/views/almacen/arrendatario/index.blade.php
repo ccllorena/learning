@@ -63,9 +63,9 @@
                         <!--<a href="" data-target="#modal-delete-{{$arre->id}}" data-toggle="modal">
                             <button class="btn btn-danger">Eliminar</button></a>-->
 
-                        <a href="{{url('/listintegrantesarre/'.$arre->id)}}"><button class="btn btn-info">Ver Integrantes</button></a>
+                        <a href="{{url('/listintegrantesarre/'.$arre->id.'/'.$idcooprop)}}"><button class="btn btn-info">Ver Integrantes</button></a>
 
-                        <a href="{{url('/editintegrantesarre/'.$arre->id)}}"><button class="btn btn-info">Crea Edit Integrantes</button></a>
+                        <a href="{{url('/editintegrantesarre/'.$arre->id.'/'.$idcooprop)}}"><button class="btn btn-info">Crea Edit Integrantes</button></a>
 
  
                         
@@ -85,6 +85,20 @@
     </div>
     
 </div>
+<div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+        
 
+     
+
+        <h3><a href="{{url('/')}}"><button class="btn btn-success">Volver</button></a>   </h3>
+       
+
+        
+    </div>
+    
+    
+    
+</div>
 @endsection
 <!--stop-->

@@ -95,14 +95,14 @@
             <li class="header"></li>
 
             <li class="treeview">
-              <a href="#">
+              <a href="{{url('/')}}">
                 <i class="fa fa-laptop"></i>
                 <span>Coopropietarios</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i> Artículos</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Categorías</a></li>
+                <li><a href="{{url('/')}}"><i class="fa fa-circle-o"></i> Cooprpitarios</a></li>
+                <!--<li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Categorías</a></li>-->
               </ul>
             </li>
 
@@ -201,9 +201,9 @@
       <!--Fin-Contenido-->
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> 2.3.0
+          <b>Version</b> 1.0
         </div>
-        <strong>Copyright &copy; 2015-2020 <a href="#">CLLA</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2018-2019 <a href="https://programadorinformatico.cl">Claudio LLorena</a>.</strong> All rights reserved.
       </footer>
 
 

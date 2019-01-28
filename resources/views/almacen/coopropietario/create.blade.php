@@ -39,7 +39,7 @@
        <div class="form-group">
            
            <button class="btn btn-primary" type="submit">Guardar</button>
-           <button class="btn btn-danger" type="reset">Cancelar</button>
+           <button class="btn btn-danger" type="reset">Reset</button>
            
        </div>
        
@@ -48,6 +48,16 @@
     </div>
     
     
+</div>
+
+
+<div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+
+        <h3><a href="{{url('/')}}"><button class="btn btn-success">Volver</button></a>   </h3>
+      
+    </div>
+   
 </div>
 @endsection
 <!--stop-->

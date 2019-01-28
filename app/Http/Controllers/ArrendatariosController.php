@@ -5,7 +5,7 @@ namespace learning\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Input; //para subir imagenes
+use Illuminate\Support\Facades\input; //para subir imagenes
 use learning\Http\Requests\ArrendatariosFormRequest;
 use learning\Arrendatarios;
 use DB;

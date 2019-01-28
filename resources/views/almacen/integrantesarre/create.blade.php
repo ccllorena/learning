@@ -2,7 +2,7 @@
 @section ('contenido')
 <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-        <h3>Nuevo Integrante</h3>
+        <h3>Nuevo Integrante Arrendatario</h3>
         @if (count($errors)>0)
         <div class="alert alert-danger">
             
@@ -17,10 +17,9 @@
   </div>
 
 
-       {!!Form::open(array('url'=>'almacen/integrante','method'=>'POST', 'autocomplete'=>'off','files'=>'true'))!!}
-       {{Form::token()}}
 
-
+       {!!Form::open(array('route'=>array('storinteearrendatarios.store'),'method'=>'POST', 'autocomplete'=>'off','files'=>'true'))!!}
+       {{Form::token()}}  
  
   <div class="row">  
 
@@ -34,10 +33,10 @@
     <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
       
         <div class="form-group">
-           <label>Coopropietario</label>
-            <select name="id_coopropietario" class="form-control">
-              @foreach ($coopropietarios as $coop)
-                <option value="{{$coop->id}}" selected>{{$coop->nombre}}</option>
+           <label>Arremdatario</label>
+            <select name="id_arrendatarios" class="form-control">
+              @foreach ($arrendatarios as $arrenda)
+                <option value="{{$arrenda->id}}" selected>{{$arrenda->nombre}}</option>
               @endforeach
             </select>            
        </div>
@@ -65,7 +64,7 @@
     
        <div class="form-group">
            <button class="btn btn-primary" type="submit">Guardar</button>
-           <button class="btn btn-danger" type="reset">Reset</button>          
+           <button class="btn btn-danger" type="reset">Cancelar</button>          
        </div>
 
     </div>
@@ -73,16 +72,7 @@
 
        
        {!!Form::close()!!}
-
-
-<div class="row">
-    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
         
-        <h3><a href="{{url('/editintegrantes/'.$coopropietarios[0]->id)}}"><button class="btn btn-success">Volver</button></a>   </h3>
-        
-    </div>
-    
-</div>        
 @endsection
 <!--stop-->
 
